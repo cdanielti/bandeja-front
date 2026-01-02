@@ -1,0 +1,51 @@
+.bandeja-layout {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.filtros {
+  width: 280px;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  position: relative;
+  transition: width 0.2s ease, padding 0.2s ease, opacity 0.2s ease;
+  overflow: hidden;
+}
+
+.filtros.collapsed {
+  width: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  opacity: 0.95;
+}
+
+.filtros .toggle-tab {
+  position: absolute;
+  top: 12px;
+  right: -16px;
+  width: 32px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: transform 0.12s ease;
+}
+
+.filtros .toggle-tab:active {
+  transform: translateX(1px);
+}
+
+.filtros .toggle-tab .icon {
+  font-size: 14px;
+}
+
+.contenido {
+  flex: 1;
+  padding: 1rem;
+}

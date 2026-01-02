@@ -1,0 +1,21 @@
+<div class="bandeja-layout">
+  <aside class="filtros" [class.collapsed]="filtrosCollapsed" role="complementary">
+    <div class="toggle-tab"
+         role="button"
+         tabindex="0"
+         (click)="toggleFiltros()"
+         (keydown.enter)="toggleFiltros()"
+         (keydown.space)="toggleFiltros()"
+         [attr.aria-expanded]="!filtrosCollapsed"
+         [attr.title]="filtrosCollapsed ? 'Mostrar filtros' : 'Ocultar filtros'">
+      <span class="icon">{{ filtrosCollapsed ? '▶' : '◀' }}</span>
+    </div>
+
+    <app-filtros-panel *ngIf="!filtrosCollapsed"></app-filtros-panel>
+  </aside>
+
+  <main class="contenido">
+    <!-- aquí irá la tabla o listado de la bandeja -->
+    <app-resultados-list></app-resultados-list>
+  </main>
+</div>

@@ -1,0 +1,40 @@
+.filtros-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.panel-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0.75rem;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  overflow: auto;
+}
+
+.panel-footer {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  min-width: 96px;
+}
+
+.filter-item input,
+.filter-item select {
+  margin-left: 0.5rem;
+}
